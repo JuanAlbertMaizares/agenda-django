@@ -29,6 +29,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # Application definition
 
 DJANGO_APPS = (
+    'django_light',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +44,7 @@ LOCAL_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'rest_framework',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
