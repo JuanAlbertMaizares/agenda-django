@@ -2,7 +2,7 @@ from multiprocessing import context
 from pipes import Template
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
-from .models import Person
+from .models import Person, Reunion
 #rest framework
 from rest_framework.generics import (
     ListAPIView,
@@ -12,7 +12,7 @@ from rest_framework.generics import (
     UpdateAPIView,
     RetrieveUpdateAPIView
 )
-from .serializers import PersonSerializer
+from .serializers import (PersonSerializer, PersonSerializer3, PersonaSerializer, PersonSerializer2, ReunionSerializer) 
 
 class ListaPersonas(ListView):
     
@@ -54,3 +54,18 @@ class PersonUpdateView(UpdateAPIView):
 class PersonModView(RetrieveUpdateAPIView):
     serializer_class = PersonSerializer 
     queryset = Person.objects.all()
+    
+class PersonApiLista(ListAPIView):
+    #serializer_class = PersonaSerializer
+    serializer_class = PersonSerializer3
+    def get_queryset(self):
+        return Person.objects.all()
+class PersonApiLista2(ListAPIView):
+    serializer_class = PersonSerializer2 
+    def get_queryset(self):
+        return Person.objects.all()
+class ReunionApiLista(ListAPIView):
+    serializer_class = ReunionSerializer
+    
+    def get_queryset(self):
+        return Reunion.objects.all()

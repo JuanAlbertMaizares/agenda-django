@@ -46,4 +46,17 @@ urlpatterns = [
         'api/persona/modificar/<pk>/',
         views.PersonModView.as_view(),
     ),
+    path(
+        'api/personas/',
+        views.PersonApiLista.as_view(),
+    ),
+    path(
+        'api/personas-m/',
+        views.PersonApiLista2.as_view(),
+    ), 
+    path(
+        'api/reuniones/',
+        views.ReunionApiLista.as_view(),
+    ),  
+     
 ]
