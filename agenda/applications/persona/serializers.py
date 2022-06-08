@@ -1,6 +1,6 @@
 from email.policy import default
 from .models import Person, Reunion, Hobby
-from rest_framework import serializers
+from rest_framework import serializers, pagination
 
 class PersonSerializer(serializers.ModelSerializer):
     
@@ -77,3 +77,10 @@ class ReunionSerializerLink(serializers.HyperlinkedModelSerializer):
                 'lookup_field': 'pk'
             }
         }  
+class PersonPagination(pagination.PageNumberPagination):
+    page_size = 5
+    max_page_size = 50
+
+class CountReunionSerializer(serializers.Serializer):
+    persona__job = serializers.CharField()
+    cantidad = serializers.IntegerField()
