@@ -1,4 +1,5 @@
 # agendadj
 proyecto agenda para curso profesional django.
-JohnFenker una cuenta anterior de Maizares Juan Alberto.
+
+<p>*JohnFenker* una cuenta anterior de Maizares Juan Alberto.</p>
 
