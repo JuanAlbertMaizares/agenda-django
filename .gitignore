@@ -1,0 +1,7 @@
+agenda/applications/home/migrations/*
+agenda/applications/persona/migrations/*
+agenda/agenda/__pycache__/*
+agenda/applications/__pycache__/*
+agenda/applications/home/__pycache__/*
+agenda/applications/persona/__pycache__/*
+agenda/agenda/settings/__pycache__/*
